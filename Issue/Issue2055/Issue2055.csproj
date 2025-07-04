@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Providers\FreeSql.Provider.SqlServerForSystem\FreeSql.Provider.SqlServerForSystem.csproj" />
+    <ProjectReference Include="..\..\Providers\FreeSql.Provider.SqlServerForSystem\FreeSql.Provider.SqlServerForSystem.csproj" />
   </ItemGroup>
 
 </Project>

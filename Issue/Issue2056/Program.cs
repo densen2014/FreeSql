@@ -15,13 +15,11 @@ class Program
     static void Main(string[] args)
     {
         fsql.Select<OrderDetails001>()
-                            .Include(a => a.OrdersLite)
-                            .LeftJoin(a => a.OrdersLite!.Customers!.ID == a.OrdersLite!.CustomerID)
+                            .Include(a => a.OrdersLite.Customers)
                             .ToList();
 
         fsql.Select<OrderDetails001>()
-                            .Include(a => a.OrdersLite)
-                            .LeftJoin(a => a.OrdersLite!.Customers!.ID == a.OrdersLite!.CustomerID)
+                            .Include(a => a.OrdersLite.Customers)
                             .ToChunk(100, done =>
                             {
                                 var list = done.Object;
