@@ -19,7 +19,7 @@ class Program
         var list =new BindingList<OrderDetails001>();
 
         var repo = fsql.GetRepository<OrderDetails001>();
-        //repo.BeginEdit(list.ToList()); //开始对 list 进行编辑
+        repo.BeginEdit(list.ToList()); //开始对 list 进行编辑
 
         list.Add(new OrderDetails001
         {
